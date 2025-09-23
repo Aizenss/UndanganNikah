@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/05aea6e721.js" crossorigin="anonymous"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .animate-slide-up {
+                animation: slideUp 2s ease-out forwards;
+            }
+            @keyframes slideUp {
+                from {
+                    transform: translateY(2vh);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            .font-great-vibes {
+                font-family: 'Great Vibes', cursive;
+            }
+            .font-montserrat {
+                font-family: 'Montserrat', sans-serif;
+            }
+            body.initial-state {
+                overflow: hidden;
+            }
+            body.scroll-enabled {
+                overflow: auto;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#bfa5a6] font-montserrat initial-state">
+    <div id="cover" class="flex flex-col items-center justify-center max-h-screen relative overflow-hidden">
+        <div class="z-0 absolute top-0 left-0">
+            <img src="components/redflow.png" class="w-[500px] opacity-15" alt="">
+        </div>
+        <div class="z-10 absolute -bottom-6 -right-16">
+            <img src="components/flower.png" class="w-[500px] opacity-30" alt="">
+        </div>
+        <div class="z-20 flex flex-col items-center justify-center min-h-screen">
+            <h1 class="font-great-vibes text-5xl md:text-[70px] font-semibold text-rose-800">The Wedding</h1>
+            <img src="components/Pengantin-1-bwr.jpg" alt="" class="w-[200px] my-9 rounded-lg">
+            <h2 class="font-great-vibes text-4xl font-semibold text-rose-800 mb-2">Faisal & Hanny</h2>
+            <div class="flex items-center justify-center">
+                <div class="border-t-2 border-rose-800 w-32 mx-auto my-6"></div>
+                <span class="text-3xl mx-4 text-rose-800">&#10084;</span>
+                <div class="border-t-2 border-rose-800 w-32 mx-auto my-6"></div>
+            </div>
+            <p class="text-rose-800 mb-8 text-lg text-center lg:max-w-[600px]">Tanpa Mengurangi Rasa Hormat, Kami
+                Bermaksud Mengundang Saudara/Saudari Untuk Menghadiri Acara Pernikahan Kami</p>
+            <button id="openBtn"
+                class="border border-rose-800 text-rose-800 hover:bg-rose-800 hover:text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ">
+                Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <div id="content" class="hidden">
+        <!-- Header -->
+        <header class="bg-white text-[#252525] text-center py-12 px-4">
+            <h6 class="text-l md:text-xl px-10 flex justify-center">Atas Karunia Tuhan Yang Maha Esa, perkenankanlah
+                kami</h6>
+            <h6 class="text-l md:text-xl px-10 flex justify-center">menyampaikan kabar bahagia kepada
+                Bapak/Ibu/Saudara/i mengenai
+                hari pernikahan kami.</h6>
+            <div class="flex items-center justify-center my-10">
+                <div class="border-t-2 border-rose-300 w-[100px] md:w-[300px] mx-auto my-6"></div>
+                <span class="font-great-vibes text-3xl mx-4 text-[#252525] font-bold">Meet the happy couple</span>
+                <div class="border-t-2 border-rose-300 w-[100px] md:w-[300px] mx-auto my-6"></div>
+            </div>
+            <div class="grid grid-rows-2 max-w-[900px] mx-auto" id="identity-1">
+                <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center mb-10 gap-2">
+                    <div class="text-center flex flex-col items-center order-2 md:order-1">
+                        <h4 class="font-great-vibes font-semibold text-[60px] text-rose-700 mb-2">Faisal</h4>
+                        <p class="font-regular text-xl text-rose-700">Faisal Fatchu Roji</p>
+                        <p class="font-regular text-lg text-rose-700">Anak ke 3 dari Bapak Jono & Ibu Fatimah</p>
+                        <p class="font-regular text-lg text-gray-800">Dsn Judel, Kel. Klemunan, Rt 2 Rw 1, Kec.
+                            Wlingi, Kab. Blitar</p>
+                        <br>
+                    </div>
+                    <img src="components/Pengantin-1-bw.jpg" alt=""
+                        class="w-[300px] rounded-lg mx-auto md:ml-5 order-1 md:order-2">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 mx-auto items-center gap-2">
+                    <div class="flex justify-end">
+                        <img src="components/Pengantin-2-bw.jpg" alt=""
+                            class="w-[300px] rounded-lg mx-auto md:mr-5 order-1 md:order-2">
+                    </div>
+                    <div class="text-center flex flex-col items-center order-2 md:order-1">
+                        <h4 class="font-great-vibes font-semibold text-[60px] text-rose-700 mb-2">Hanny</h4>
+                        <p class="font-regular text-xl text-rose-700">Hanny Widhianingrum</p>
+                        <p class="font-regular text-lg text-rose-700">Anak ke 1 dari Bapak Suliono & Ibu rani
+                            Sulastri</p>
+                        <p class="font-regular text-lg text-gray-800">Dsn. Gombong, Ds. Pagersari, Rt 12 Rw 3, Kec.
+                            Ngantang, Kab. Malang</p><br>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <br>
+        <!-- Detail Acara -->
+        <div class="mx-auto mb-8 relative">
+            <div class="z-0 absolute -top-6 left-0">
+                <img src="components/redflow.png" class="w-[500px] opacity-15" alt="">
+            </div>
+            <div class="z-10 flex flex-col items-center">
+                <h2 class="font-montserrat font-semibold text-3xl text-center text-rose-800 mt-6 mb-6">Hitung Mundur
+                    Acara
+                </h2>
+                <div id="countdown" class="grid grid-cols-4 max-w-[700px] mx-auto mb-6 text-center gap-4">
+                    <div class="flex flex-col justify-center gap-1">
+                        <span id="days" class="font-semibold text-3xl text-rose-800">0</span>
+                        <span class="font-semibold text-lg text-rose-800">Hari</span>
+                    </div>
+                    <div class="flex flex-col justify-center gap-1">
+                        <span id="hours" class="font-semibold text-3xl text-rose-800">0</span>
+                        <span class="font-semibold text-lg text-rose-800">Jam</span>
+                    </div>
+                    <div class="flex flex-col justify-center gap-1">
+                        <span id="minutes" class="font-semibold text-3xl text-rose-800">0</span>
+                        <span class="font-semibold text-lg text-rose-800">Menit</span>
+                    </div>
+                    <div class="flex flex-col justify-center gap-1">
+                        <span id="seconds" class="font-semibold text-3xl text-rose-800">0</span>
+                        <span class="font-semibold text-lg text-rose-800">Detik</span>
+                    </div>
+                </div>
+                <div class="border-t-2 border-rose-800 w-[300px] md:w-[600px] mx-auto my-6"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 max-w-[700px] mx-auto gap-6">
+                    <div class="text-center">
+                        <h3 class="font-semibold text-lg text-rose-800 mb-2">Akad Nikah</h3>
+                        <p class="text-gray-700">Senin, 6 Oktober 2025</p>
+                        <p class="text-gray-700">09.00 WIB</p>
+                        <p class="text-gray-600">Rumah Mempelai Wanita</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-semibold text-lg text-rose-800 mb-2">Resepsi Pernikahan</h3>
+                        <p class="text-gray-700">Senin, 6 Oktober 2025</p>
+                        <p class="text-gray-700">16.00 - Selesai WIB</p>
+                        <p class="text-gray-600">Rumah Mempelai Wanita</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/wYjMqvwwx7PL9BPh6?g_st=awb" target="_blank"
+                        class="bg-rose-800 hover:bg-rose-900 text-white font-semibold py-3 px-6 md:col-span-2 rounded-full shadow-lg transform hover:scale-105 transition duration-300 mx-auto mt-3">Buka
+                        Lokasi</a>
+                </div>
+            </div>
+        </div>
+        <!-- Galeri -->
+        <div class="max-w-2xl bg-white rounded-lg shadow-md mx-10 md:mx-auto p-6 md:p-8 mb-8">
+            <h2 class="font-great-vibes text-3xl text-center text-rose-600 mb-6">Galeri Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                <img class="w-[300px] object-fill bg-pink-100 rounded" src="components/Pengantin-1-w.jpg">
+                <img class="w-[300px] object-fill bg-pink-100 rounded" src="components/Pengantin-2-w.jpg">
+                <img class="w-[300px] object-fill bg-pink-100 rounded" src="components/Pengantin-3-w.jpg">
+                <img class="w-[300px] object-fill bg-pink-100 rounded" src="components/Pengantin-4-w.jpg">
+                <img class="w-[300px] object-fill bg-pink-100 rounded" src="components/Pengantin-5-w.jpg">
+                <img class="w-[300px] object-fill bg-pink-100 rounded" src="components/Pengantin-6-w.jpg">
+            </div>
+        </div>
+        <!-- Hadiah -->
+        <div class="bg-white text-[#252525] text-center py-12 px-4">
+            <div class="flex items-center justify-center my-3">
+                <div class="border-t-2 border-rose-800 w-[100px] md:w-[300px] mx-auto my-6"></div>
+                <h3 class="font-montserrat font-bold text-[50px]">Hadiah Spesial</h3>
+                <div class="border-t-2 border-rose-800 w-[100px] md:w-[300px] mx-auto my-6"></div>
+            </div>
+            <p class="text-l px-10">Kehadiran Anda merupakan sebuah do'a serta rasa syukur bagi
+                kami, namun jika memberi adalah bentuk Do'a & cinta kasih bagi Anda, Anda dapat memberi kado secara
+                cashless dan kami akan senang hati menerimanya dan tentu semakin melengkapi kebahagiaan kami.</p>
+            <button id="copyBtn"
+                class="block mx-auto mt-8 border border-rose-800 text-rose-800 hover:bg-rose-800 hover:text-white font-semibold py-3 px-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                <i class="fa-solid fa-gift"></i><br>
+                BRI<br>
+                <span id="rekening">3220922412</span>
+            </button><br>
+            <span class="opacity-50">*Klik tombol di atas untuk menyalin nomor rekening</span>
+            <div class="border-t-2 border-rose-800 w-[800px] mx-auto my-6"></div>
+            <h3 class="font-montserrat font-bold text-[30px] mt-6">TERIMA KASIH</h3>
+            <p class="text-l px-10">
+                Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan
+                hadir untuk memberikan doa restu kepada kedua mempelai. Atas kehadiran serta doa restu, kami ucapkan
+                terima kasih.
+                Sampai Jumpa di Hari Bahagia Kami
+            </p>
+            <div class="grid grid-cols-2 align-center gap-2 mt-4">
+                <div class="grid grid-cols-1">
+                    <h4 class="font-montserrat font-semibold text-[16px] m-0">Keluarga Besar</h4>
+                    <h4 class="font-montserrat font-semibold text-[20px] text-rose-800 m-0">Mempelai Pria</h4>
+                    <h4 class="font-montserrat font-semibold text-[20px] mt-2">Bapak Jono & Ibu Fatimah</h4>
+                </div>
+                <div class="grid grid-cols-1">
+                    <h4 class="font-montserrat font-semibold text-[16px] m-0">Keluarga Besar</h4>
+                    <h4 class="font-montserrat font-semibold text-[20px] text-rose-800 m-0">Mempelai Wanita</h4>
+                    <h4 class="font-montserrat font-semibold text-[20px] mt-2">Bapak Suliono & Ibu Rani Sulastri</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cover = document.getElementById('cover');
+            const content = document.getElementById('content');
+            const openBtn = document.getElementById('openBtn');
+            const body = document.body;
+
+            // Sembunyikan tombol setelah diklik
+            openBtn.addEventListener('click', function () {
+                // Sembunyikan tombol
+                openBtn.style.display = 'none';
+
+                // Tampilkan konten dengan animasi
+                content.classList.remove('hidden');
+                content.classList.add('animate-slide-up');
+
+                // Aktifkan scroll
+                body.classList.remove('initial-state');
+                body.classList.add('scroll-enabled');
+
+                // Scroll halus ke konten setelah animasi
+                setTimeout(() => {
+                    content.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            });
+        });
+
+
+        const targetDate = new Date("2025-10-06T00:00:00+07:00").getTime();
+
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerHTML =
+                    "<p class='text-2xl text-rose-600 font-semibold'>Acara telah dimulai 🎉</p>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }, 1000);
+
+
+        document.getElementById("copyBtn").addEventListener("click", () => {
+            const nomorRekening = document.getElementById("rekening").innerText;
+
+            navigator.clipboard.writeText(nomorRekening).then(() => {
+            }).catch(err => {
+                console.error("Gagal menyalin", err);
+            });
+        });
+    </script>
+</body>
+
+</html>
