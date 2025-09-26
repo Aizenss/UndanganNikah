@@ -88,7 +88,7 @@
             <div class="grid grid-rows-2 max-w-[900px] mx-auto" id="identity-1">
                 <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center mb-10 gap-2">
                     <div class="text-center flex flex-col items-center order-2 md:order-1">
-                        <h4 class="font-montserrat font-semibold text-[60px] text-rose-700 mb-2">Faisal</h4>
+                        <h4 class="font-great-vibes font-semibold text-[60px] text-rose-700 mb-2">Faisal</h4>
                         <p class="font-regular text-xl text-rose-700">Faisal Fatchu Roji</p>
                         <p class="font-regular text-lg text-rose-700">Anak ke 3 dari Bapak Jono & Ibu Fatimah</p>
                         <p class="font-regular text-lg text-gray-800">Dsn Judel, Kel. Klemunan, Rt 2 Rw 1, Kec.
@@ -104,7 +104,7 @@
                             class="w-[300px] rounded-lg mx-auto md:mr-5 order-1 md:order-2">
                     </div>
                     <div class="text-center flex flex-col items-center order-2 md:order-1">
-                        <h4 class="font-montserrat font-semibold text-[60px] text-rose-700 mb-2">Hanny</h4>
+                        <h4 class="font-great-vibes font-semibold text-[60px] text-rose-700 mb-2">Hanny</h4>
                         <p class="font-regular text-xl text-rose-700">Hanny Widhianingrum</p>
                         <p class="font-regular text-lg text-rose-700">Anak ke 1 dari Bapak Suliono & Ibu rani
                             Sulastri</p>
@@ -184,12 +184,22 @@
             <p class="text-l px-10">Kehadiran Anda merupakan sebuah do'a serta rasa syukur bagi
                 kami, namun jika memberi adalah bentuk Do'a & cinta kasih bagi Anda, Anda dapat memberi kado secara
                 cashless dan kami akan senang hati menerimanya dan tentu semakin melengkapi kebahagiaan kami.</p>
-            <button id="copyBtn"
-                class="block mx-auto mt-8 border border-rose-800 text-rose-800 hover:bg-rose-800 hover:text-white font-semibold py-3 px-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                <i class="fa-solid fa-gift"></i><br>
-                BCA<br>
-                <span id="rekening">3220922412</span>
-            </button><br>
+            <div class="grid grid-cols-1 md:grid-cols-2 align-center gap-2 mt-4 max-w-lg mx-auto">
+                <button id="copyBtn1"
+                    class="block mx-auto mt-8 border border-rose-800 text-rose-800 hover:bg-rose-800 hover:text-white font-semibold py-3 px-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <i class="fa-solid fa-gift"></i><br>
+                    BCA(Hanny)<br>
+                    <span id="rekening1">3220922412</span>
+                </button>
+                <button id="copyBtn2"
+                    class="block mx-auto mt-8 border border-rose-800 text-rose-800 hover:bg-rose-800 hover:text-white font-semibold py-3 px-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <i class="fa-solid fa-gift"></i><br>
+                    SEABANK<br>
+                    (Faisal)<br>
+                    <span id="rekening2">901390430818</span>
+                </button>
+            </div>
+            <br>
             <span class="opacity-50">*Klik tombol di atas untuk menyalin nomor rekening</span>
             <div class="border-t-2 border-rose-800 w-[100px] md:w-[800px] mx-auto my-6"></div>
             <h3 class="font-montserrat font-bold text-[30px] mt-6">TERIMA KASIH</h3>
@@ -236,7 +246,7 @@
 
                 setTimeout(() => {
                     content.scrollIntoView({ behavior: 'smooth' });
-                }, 100);
+                }, 600);
 
                 music.play().catch(err => {
                     console.log("Autoplay diblokir, user perlu klik:", err);
@@ -270,10 +280,18 @@
         }, 1000);
 
 
-        document.getElementById("copyBtn").addEventListener("click", () => {
-            const nomorRekening = document.getElementById("rekening").innerText;
+        document.getElementById("copyBtn1").addEventListener("click", () => {
+            const nomorRekening1 = document.getElementById("rekening1").innerText;
 
-            navigator.clipboard.writeText(nomorRekening).then(() => {
+            navigator.clipboard.writeText(nomorRekening1).then(() => {
+            }).catch(err => {
+                console.error("Gagal menyalin", err);
+            });
+        });
+        document.getElementById("copyBtn2").addEventListener("click", () => {
+            const nomorRekening2 = document.getElementById("rekening2").innerText;
+
+            navigator.clipboard.writeText(nomorRekening2).then(() => {
             }).catch(err => {
                 console.error("Gagal menyalin", err);
             });
